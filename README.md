@@ -9,7 +9,7 @@ This repository contains hands-on practice with HTML, CSS, JavaScript, and full-
 
 | Module/Part                      | Description                        |
 |----------------------------------|------------------------------------|
-| HTML (Level 1) - Part A          | Basics of HTML structure, tags, lists, links |
+| HTML                             | Basics of HTML structure, tags, lists, links |
 | CSS Practice                     | Styling, layout, hover effects     |
 | JavaScript Basics                | DOM, events, conditionals, loops   |
 | Project: Card Hover UI          | Profile card UI with hover effect |
