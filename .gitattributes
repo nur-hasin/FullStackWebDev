@@ -1,0 +1,1232 @@
+# 🚀 Comprehensive Multi-Language .gitattributes - Unlimited File Size
+# Supports: Web Dev, Mobile, Desktop, ML/AI, Data Science, Game Dev, System Programming
+
+# 🎨 Design Files - Direct Git tracking
+*.psd binary
+*.ai binary
+*.sketch binary
+*.fig binary
+*.xd binary
+*.indd binary
+*.eps binary
+*.cdr binary
+
+# 📦 Archive Files - Direct Git tracking
+*.zip binary
+*.7z binary
+*.rar binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.xz binary
+*.lzma binary
+*.cab binary
+
+# 🎬 Video Files - Direct Git tracking (Warning: Can be very large)
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.mkv binary
+*.wmv binary
+*.flv binary
+*.webm binary
+*.m4v binary
+*.3gp binary
+*.ogv binary
+
+# 🎵 Audio Files - Direct Git tracking
+*.mp3 binary
+*.wav binary
+*.flac binary
+*.aac binary
+*.ogg binary
+*.wma binary
+*.m4a binary
+*.opus binary
+*.ac3 binary
+
+# 🖼️ Image Files - Direct Git tracking
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.tiff binary
+*.tif binary
+*.svg text eol=lf
+*.webp binary
+*.ico binary
+*.heic binary
+*.avif binary
+*.jxl binary
+
+# 💿 Executable & System Files - Direct Git tracking
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.iso binary
+*.dmg binary
+*.msi binary
+*.deb binary
+*.rpm binary
+*.app binary
+*.appx binary
+*.snap binary
+
+# 📊 Document Files - Direct Git tracking
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+*.odt binary
+*.ods binary
+*.odp binary
+*.rtf binary
+*.pages binary
+*.numbers binary
+*.keynote binary
+
+# 🌐 Full Stack Web Development - Frontend & Backend
+
+# 🎨 Frontend Frameworks & Libraries
+*.js text eol=lf diff=javascript
+*.jsx text eol=lf diff=javascript
+*.ts text eol=lf diff=typescript
+*.tsx text eol=lf diff=typescript
+*.mjs text eol=lf diff=javascript
+*.cjs text eol=lf diff=javascript
+*.json text eol=lf
+*.json5 text eol=lf
+*.jsonc text eol=lf
+*.geojson text eol=lf
+*.topojson text eol=lf
+*.har text eol=lf
+*.webmanifest text eol=lf
+*.vue text eol=lf
+*.svelte text eol=lf
+*.astro text eol=lf
+*.angular text eol=lf
+*.component.html text eol=lf diff=html
+*.component.ts text eol=lf diff=typescript
+*.component.scss text eol=lf diff=css
+*.component.css text eol=lf diff=css
+*.module.ts text eol=lf diff=typescript
+*.service.ts text eol=lf diff=typescript
+*.guard.ts text eol=lf diff=typescript
+*.pipe.ts text eol=lf diff=typescript
+*.directive.ts text eol=lf diff=typescript
+*.interceptor.ts text eol=lf diff=typescript
+*.resolver.ts text eol=lf diff=typescript
+*.spec.ts text eol=lf diff=typescript
+*.test.ts text eol=lf diff=typescript
+*.e2e-spec.ts text eol=lf diff=typescript
+*.po.ts text eol=lf diff=typescript
+
+# 🎯 React Ecosystem
+*.jsx text eol=lf diff=javascript
+*.tsx text eol=lf diff=typescript
+*.stories.js text eol=lf diff=javascript
+*.stories.jsx text eol=lf diff=javascript
+*.stories.ts text eol=lf diff=typescript
+*.stories.tsx text eol=lf diff=typescript
+*.story.js text eol=lf diff=javascript
+*.story.jsx text eol=lf diff=javascript
+*.story.ts text eol=lf diff=typescript
+*.story.tsx text eol=lf diff=typescript
+*.mdx text eol=lf diff=markdown
+
+# 🎨 Styling & Design Systems
+*.css text eol=lf diff=css
+*.scss text eol=lf diff=css
+*.sass text eol=lf diff=css
+*.less text eol=lf diff=css
+*.styl text eol=lf diff=css
+*.stylus text eol=lf diff=css
+*.pcss text eol=lf diff=css
+*.postcss text eol=lf diff=css
+*.sss text eol=lf diff=css
+*.wxss text eol=lf diff=css
+*.acss text eol=lf diff=css
+*.ccss text eol=lf diff=css
+*.theme text eol=lf diff=css
+*.skin text eol=lf diff=css
+*.variables.css text eol=lf diff=css
+*.vars.css text eol=lf diff=css
+*.constants.css text eol=lf diff=css
+*.tokens.css text eol=lf diff=css
+*.design-tokens.json text eol=lf
+*.tailwind.config.js text eol=lf diff=javascript
+*.tailwind.config.ts text eol=lf diff=typescript
+*.postcss.config.js text eol=lf diff=javascript
+*.postcss.config.ts text eol=lf diff=typescript
+*.stylelint.config.js text eol=lf diff=javascript
+*.stylelint.config.ts text eol=lf diff=typescript
+
+# 📄 Markup & Templates
+*.html text eol=lf diff=html
+*.htm text eol=lf diff=html
+*.xhtml text eol=lf diff=html
+*.shtml text eol=lf diff=html
+*.dhtml text eol=lf diff=html
+*.jinja text eol=lf diff=html
+*.jinja2 text eol=lf diff=html
+*.j2 text eol=lf diff=html
+*.twig text eol=lf diff=html
+*.liquid text eol=lf diff=html
+*.mustache text eol=lf diff=html
+*.hogan text eol=lf diff=html
+*.hulk text eol=lf diff=html
+*.hbs text eol=lf
+*.handlebars text eol=lf
+*.ejs text eol=lf
+*.eta text eol=lf
+*.pug text eol=lf
+*.jade text eol=lf
+*.haml text eol=lf
+*.slim text eol=lf
+*.razor text eol=lf
+*.cshtml text eol=lf
+*.vbhtml text eol=lf
+*.aspx text eol=lf
+*.ascx text eol=lf
+*.master text eol=lf
+*.sitemap text eol=lf
+*.webconfig text eol=lf
+*.marko text eol=lf
+*.riot text eol=lf
+*.tag text eol=lf
+*.njk text eol=lf
+*.nunjucks text eol=lf
+*.11ty.js text eol=lf diff=javascript
+*.edge text eol=lf
+
+# 🚀 Backend Frameworks & Languages
+*.php text eol=lf diff=php
+*.php3 text eol=lf diff=php
+*.php4 text eol=lf diff=php
+*.php5 text eol=lf diff=php
+*.php7 text eol=lf diff=php
+*.php8 text eol=lf diff=php
+*.phtml text eol=lf diff=php
+*.pht text eol=lf diff=php
+*.phar text eol=lf diff=php
+*.phps text eol=lf diff=php
+*.phpt text eol=lf diff=php
+*.blade.php text eol=lf diff=php
+*.twig text eol=lf diff=html
+*.smarty text eol=lf diff=html
+*.tpl text eol=lf diff=html
+*.asp text eol=lf
+*.aspx text eol=lf
+*.ascx text eol=lf
+*.ashx text eol=lf
+*.asmx text eol=lf
+*.axd text eol=lf
+*.config text eol=lf
+*.svc text eol=lf
+*.jsp text eol=lf diff=java
+*.jspf text eol=lf diff=java
+*.jspx text eol=lf diff=java
+*.tag text eol=lf diff=java
+*.tagx text eol=lf diff=java
+*.tld text eol=lf diff=xml
+*.ftl text eol=lf diff=html
+*.ftlh text eol=lf diff=html
+*.ftlx text eol=lf diff=html
+*.vm text eol=lf diff=html
+*.vsl text eol=lf diff=html
+*.vtl text eol=lf diff=html
+
+# 🔧 Node.js & Server-side JavaScript
+*.cjs text eol=lf diff=javascript
+*.mjs text eol=lf diff=javascript
+*.node text eol=lf diff=javascript
+*.njs text eol=lf diff=javascript
+*.ts text eol=lf diff=typescript
+*.tsx text eol=lf diff=typescript
+*.cts text eol=lf diff=typescript
+*.mts text eol=lf diff=typescript
+*.express.js text eol=lf diff=javascript
+*.koa.js text eol=lf diff=javascript
+*.fastify.js text eol=lf diff=javascript
+*.hapi.js text eol=lf diff=javascript
+*.nest.js text eol=lf diff=javascript
+*.next.js text eol=lf diff=javascript
+*.nuxt.js text eol=lf diff=javascript
+*.sapper.js text eol=lf diff=javascript
+*.sveltekit.js text eol=lf diff=javascript
+*.remix.tsx text eol=lf diff=typescript
+*.gatsby.js text eol=lf diff=javascript
+*.astro text eol=lf
+
+# 🐍 Python Web Frameworks
+*.py text eol=lf diff=python
+*.pyx text eol=lf diff=python
+*.pyi text eol=lf diff=python
+*.pyw text eol=lf diff=python
+*.wsgi text eol=lf diff=python
+*.asgi text eol=lf diff=python
+*.django.py text eol=lf diff=python
+*.flask.py text eol=lf diff=python
+*.fastapi.py text eol=lf diff=python
+*.tornado.py text eol=lf diff=python
+*.pyramid.py text eol=lf diff=python
+*.cherrypy.py text eol=lf diff=python
+*.bottle.py text eol=lf diff=python
+*.falcon.py text eol=lf diff=python
+*.starlette.py text eol=lf diff=python
+*.quart.py text eol=lf diff=python
+*.aiohttp.py text eol=lf diff=python
+*.uvicorn.py text eol=lf diff=python
+*.gunicorn.py text eol=lf diff=python
+*.celery.py text eol=lf diff=python
+*.rq.py text eol=lf diff=python
+
+# 🔴 Ruby Web Frameworks
+*.rb text eol=lf diff=ruby
+*.rbw text eol=lf diff=ruby
+*.rake text eol=lf diff=ruby
+*.thor text eol=lf diff=ruby
+*.rabl text eol=lf diff=ruby
+*.ru text eol=lf diff=ruby
+*.builder text eol=lf diff=ruby
+*.rxml text eol=lf diff=ruby
+*.rjs text eol=lf diff=ruby
+*.rails.rb text eol=lf diff=ruby
+*.sinatra.rb text eol=lf diff=ruby
+*.hanami.rb text eol=lf diff=ruby
+*.padrino.rb text eol=lf diff=ruby
+*.grape.rb text eol=lf diff=ruby
+*.rack.rb text eol=lf diff=ruby
+*.puma.rb text eol=lf diff=ruby
+*.unicorn.rb text eol=lf diff=ruby
+*.sidekiq.rb text eol=lf diff=ruby
+*.resque.rb text eol=lf diff=ruby
+*.delayed_job.rb text eol=lf diff=ruby
+*.erb text eol=lf
+*.haml text eol=lf
+*.slim text eol=lf
+*.liquid text eol=lf
+
+# ☕ Java Web Frameworks
+*.java text eol=lf diff=java
+*.jsp text eol=lf diff=java
+*.jspf text eol=lf diff=java
+*.jspx text eol=lf diff=java
+*.jhtml text eol=lf diff=java
+*.spring.java text eol=lf diff=java
+*.boot.java text eol=lf diff=java
+*.mvc.java text eol=lf diff=java
+*.rest.java text eol=lf diff=java
+*.jpa.java text eol=lf diff=java
+*.hibernate.java text eol=lf diff=java
+*.struts.java text eol=lf diff=java
+*.jsf.java text eol=lf diff=java
+*.wicket.java text eol=lf diff=java
+*.vaadin.java text eol=lf diff=java
+*.grails.java text eol=lf diff=java
+*.play.java text eol=lf diff=java
+*.spark.java text eol=lf diff=java
+*.dropwizard.java text eol=lf diff=java
+*.micronaut.java text eol=lf diff=java
+*.quarkus.java text eol=lf diff=java
+*.helidon.java text eol=lf diff=java
+*.vertx.java text eol=lf diff=java
+
+# 🔷 C# Web Frameworks
+*.cs text eol=lf diff=csharp
+*.csx text eol=lf diff=csharp
+*.razor text eol=lf
+*.cshtml text eol=lf
+*.vbhtml text eol=lf
+*.aspx text eol=lf
+*.ascx text eol=lf
+*.master text eol=lf
+*.mvc.cs text eol=lf diff=csharp
+*.webapi.cs text eol=lf diff=csharp
+*.core.cs text eol=lf diff=csharp
+*.blazor.cs text eol=lf diff=csharp
+*.signalr.cs text eol=lf diff=csharp
+*.minimal.cs text eol=lf diff=csharp
+*.grpc.cs text eol=lf diff=csharp
+*.odata.cs text eol=lf diff=csharp
+*.graphql.cs text eol=lf diff=csharp
+*.orleans.cs text eol=lf diff=csharp
+*.dapr.cs text eol=lf diff=csharp
+*.maui.cs text eol=lf diff=csharp
+*.uno.cs text eol=lf diff=csharp
+*.avalonia.cs text eol=lf diff=csharp
+
+# 🦸 Go Web Frameworks
+*.go text eol=lf diff=go
+*.gin.go text eol=lf diff=go
+*.echo.go text eol=lf diff=go
+*.fiber.go text eol=lf diff=go
+*.chi.go text eol=lf diff=go
+*.mux.go text eol=lf diff=go
+*.buffalo.go text eol=lf diff=go
+*.beego.go text eol=lf diff=go
+*.revel.go text eol=lf diff=go
+*.iris.go text eol=lf diff=go
+*.martini.go text eol=lf diff=go
+*.negroni.go text eol=lf diff=go
+*.gorilla.go text eol=lf diff=go
+*.httprouter.go text eol=lf diff=go
+*.fasthttp.go text eol=lf diff=go
+*.gorm.go text eol=lf diff=go
+*.xorm.go text eol=lf diff=go
+*.ent.go text eol=lf diff=go
+*.sqlx.go text eol=lf diff=go
+*.migrate.go text eol=lf diff=go
+
+# 🦀 Rust Web Frameworks
+*.rs text eol=lf diff=rust
+*.actix.rs text eol=lf diff=rust
+*.warp.rs text eol=lf diff=rust
+*.axum.rs text eol=lf diff=rust
+*.rocket.rs text eol=lf diff=rust
+*.tide.rs text eol=lf diff=rust
+*.hyper.rs text eol=lf diff=rust
+*.tokio.rs text eol=lf diff=rust
+*.serde.rs text eol=lf diff=rust
+*.diesel.rs text eol=lf diff=rust
+*.sqlx.rs text eol=lf diff=rust
+*.sea-orm.rs text eol=lf diff=rust
+*.yew.rs text eol=lf diff=rust
+*.leptos.rs text eol=lf diff=rust
+*.percy.rs text eol=lf diff=rust
+*.seed.rs text eol=lf diff=rust
+*.sycamore.rs text eol=lf diff=rust
+*.dioxus.rs text eol=lf diff=rust
+*.tauri.rs text eol=lf diff=rust
+*.wasm.rs text eol=lf diff=rust
+
+# 🌐 Configuration & Environment Files
+*.env text eol=lf
+*.env.local text eol=lf
+*.env.development text eol=lf
+*.env.test text eol=lf
+*.env.production text eol=lf
+*.env.staging text eol=lf
+*.env.example text eol=lf
+*.env.template text eol=lf
+*.env.sample text eol=lf
+*.env.default text eol=lf
+*.dotenv text eol=lf
+*.envrc text eol=lf
+*.environment text eol=lf
+*.config.js text eol=lf diff=javascript
+*.config.ts text eol=lf diff=typescript
+*.config.mjs text eol=lf diff=javascript
+*.config.cjs text eol=lf diff=javascript
+*.config.json text eol=lf
+*.config.yaml text eol=lf
+*.config.yml text eol=lf
+*.config.toml text eol=lf
+*.config.ini text eol=lf
+*.config.properties text eol=lf
+*.settings.json text eol=lf
+*.settings.yaml text eol=lf
+*.settings.yml text eol=lf
+*.settings.toml text eol=lf
+*.settings.ini text eol=lf
+*.settings.properties text eol=lf
+*.secrets.json text eol=lf
+*.secrets.yaml text eol=lf
+*.secrets.yml text eol=lf
+*.credentials.json text eol=lf
+*.credentials.yaml text eol=lf
+*.credentials.yml text eol=lf
+
+# 📦 Package Management & Dependencies
+package.json text eol=lf
+package-lock.json text eol=lf
+yarn.lock text eol=lf
+pnpm-lock.yaml text eol=lf
+bun.lockb binary
+composer.json text eol=lf
+composer.lock text eol=lf
+Gemfile text eol=lf
+Gemfile.lock text eol=lf
+Pipfile text eol=lf
+Pipfile.lock text eol=lf
+poetry.lock text eol=lf
+pyproject.toml text eol=lf
+requirements.txt text eol=lf
+requirements-dev.txt text eol=lf
+requirements-test.txt text eol=lf
+requirements-prod.txt text eol=lf
+setup.py text eol=lf diff=python
+setup.cfg text eol=lf
+manifest.in text eol=lf
+go.mod text eol=lf
+go.sum text eol=lf
+Cargo.toml text eol=lf
+Cargo.lock text eol=lf
+build.gradle text eol=lf diff=gradle
+build.gradle.kts text eol=lf diff=kotlin
+settings.gradle text eol=lf diff=gradle
+settings.gradle.kts text eol=lf diff=kotlin
+gradle.properties text eol=lf
+gradlew text eol=lf
+gradlew.bat text eol=crlf
+pom.xml text eol=lf diff=xml
+maven-wrapper.properties text eol=lf
+mvnw text eol=lf
+mvnw.cmd text eol=crlf
+*.csproj text eol=lf
+*.fsproj text eol=lf
+*.vbproj text eol=lf
+*.sln text eol=crlf
+*.props text eol=lf
+*.targets text eol=lf
+packages.config text eol=lf
+nuget.config text eol=lf
+Directory.Build.props text eol=lf
+Directory.Build.targets text eol=lf
+Directory.Packages.props text eol=lf
+global.json text eol=lf
+pubspec.yaml text eol=lf
+pubspec.lock text eol=lf
+mix.exs text eol=lf diff=elixir
+mix.lock text eol=lf
+rebar.config text eol=lf diff=erlang
+rebar.lock text eol=lf
+stack.yaml text eol=lf
+stack.yaml.lock text eol=lf
+cabal.project text eol=lf
+*.cabal text eol=lf diff=haskell
+elm.json text eol=lf
+elm-package.json text eol=lf
+dune-project text eol=lf
+*.opam text eol=lf
+Makefile text eol=lf
+makefile text eol=lf
+*.mk text eol=lf
+*.mak text eol=lf
+CMakeLists.txt text eol=lf
+*.cmake text eol=lf
+meson.build text eol=lf
+meson_options.txt text eol=lf
+wscript text eol=lf
+SConstruct text eol=lf
+SConscript text eol=lf
+*.scons text eol=lf
+build.xml text eol=lf diff=xml
+build.properties text eol=lf
+ivy.xml text eol=lf diff=xml
+project.clj text eol=lf diff=clojure
+deps.edn text eol=lf diff=clojure
+shadow-cljs.edn text eol=lf diff=clojure
+lein-env text eol=lf
+*.lein-env text eol=lf
+
+# 📊 API & Data Exchange
+*.json text eol=lf
+*.json5 text eol=lf
+*.jsonc text eol=lf
+*.jsonl text eol=lf
+*.ndjson text eol=lf
+*.geojson text eol=lf
+*.topojson text eol=lf
+*.xml text eol=lf diff=xml
+*.xsd text eol=lf diff=xml
+*.xsl text eol=lf diff=xml
+*.xslt text eol=lf diff=xml
+*.dtd text eol=lf diff=xml
+*.rss text eol=lf diff=xml
+*.atom text eol=lf diff=xml
+*.opml text eol=lf diff=xml
+*.svg text eol=lf diff=xml
+*.wsdl text eol=lf diff=xml
+*.wadl text eol=lf diff=xml
+*.graphql text eol=lf diff=graphql
+*.gql text eol=lf diff=graphql
+*.schema text eol=lf
+*.api text eol=lf
+*.swagger text eol=lf
+*.openapi text eol=lf
+*.raml text eol=lf
+*.blueprint text eol=lf
+*.proto text eol=lf
+*.grpc text eol=lf
+*.thrift text eol=lf
+*.avro text eol=lf
+*.avsc text eol=lf
+*.avdl text eol=lf
+*.parquet binary
+*.orc binary
+*.arrow binary
+*.feather binary
+*.msgpack binary
+*.cbor binary
+*.bson binary
+*.ubjson binary
+*.smile binary
+*.ion binary
+*.rdf text eol=lf diff=xml
+*.turtle text eol=lf
+*.ttl text eol=lf
+*.n3 text eol=lf
+*.nt text eol=lf
+*.nq text eol=lf
+*.jsonld text eol=lf
+*.owl text eol=lf diff=xml
+*.rss text eol=lf diff=xml
+*.atom text eol=lf diff=xml
+*.sitemap text eol=lf diff=xml
+*.robots.txt text eol=lf
+*.humans.txt text eol=lf
+*.security.txt text eol=lf
+*.well-known text eol=lf
+
+# 🌍 Internationalization & Localization
+*.po text eol=lf
+*.pot text eol=lf
+*.mo binary
+*.xlf text eol=lf diff=xml
+*.xliff text eol=lf diff=xml
+*.tmx text eol=lf diff=xml
+*.tbx text eol=lf diff=xml
+*.ts text eol=lf diff=xml
+*.qm binary
+*.arb text eol=lf
+*.ftl text eol=lf
+*.properties text eol=lf
+*.resx text eol=lf diff=xml
+*.resw text eol=lf diff=xml
+*.resj text eol=lf
+*.strings text eol=lf
+*.stringsdict text eol=lf diff=xml
+*.lproj text eol=lf
+*.locale text eol=lf
+*.msg text eol=lf
+*.messages text eol=lf
+*.l10n text eol=lf
+*.i18n text eol=lf
+*.intl text eol=lf
+*.lang text eol=lf
+*.language text eol=lf
+*.translation text eol=lf
+*.translate text eol=lf
+*.locales text eol=lf
+*.catalog text eol=lf
+*.dic text eol=lf
+*.aff text eol=lf
+
+# 🐍 Python - Data Science & ML
+*.py text eol=lf diff=python
+*.pyx text eol=lf diff=python
+*.pyi text eol=lf diff=python
+*.pyw text eol=lf diff=python
+*.ipynb text eol=lf
+*.py3 text eol=lf diff=python
+*.rpy text eol=lf diff=python
+*.pyde text eol=lf diff=python
+*.pyp text eol=lf diff=python
+*.pyt text eol=lf diff=python
+*.wsgi text eol=lf diff=python
+*.xpy text eol=lf diff=python
+
+# ☕ Java - Enterprise & Android
+*.java text eol=lf diff=java
+*.jsp text eol=lf diff=java
+*.jspf text eol=lf diff=java
+*.jspx text eol=lf diff=java
+*.jhtml text eol=lf diff=java
+*.kt text eol=lf diff=kotlin
+*.kts text eol=lf diff=kotlin
+*.scala text eol=lf diff=scala
+*.sc text eol=lf diff=scala
+*.clj text eol=lf diff=clojure
+*.cljs text eol=lf diff=clojure
+*.cljc text eol=lf diff=clojure
+*.gradle text eol=lf diff=gradle
+*.groovy text eol=lf diff=groovy
+
+# 🔧 C/C++ - System Programming
+*.c text eol=lf diff=c
+*.cpp text eol=lf diff=cpp
+*.cxx text eol=lf diff=cpp
+*.cc text eol=lf diff=cpp
+*.c++ text eol=lf diff=cpp
+*.h text eol=lf diff=c
+*.hpp text eol=lf diff=cpp
+*.hxx text eol=lf diff=cpp
+*.hh text eol=lf diff=cpp
+*.h++ text eol=lf diff=cpp
+*.inc text eol=lf diff=c
+*.inl text eol=lf diff=cpp
+*.ipp text eol=lf diff=cpp
+*.tcc text eol=lf diff=cpp
+*.tpp text eol=lf diff=cpp
+
+# 🔷 C# - .NET Development
+*.cs text eol=lf diff=csharp
+*.csx text eol=lf diff=csharp
+*.vb text eol=lf diff=vb
+*.vbx text eol=lf diff=vb
+*.fs text eol=lf diff=fsharp
+*.fsi text eol=lf diff=fsharp
+*.fsx text eol=lf diff=fsharp
+*.fsscript text eol=lf diff=fsharp
+*.sln text eol=crlf
+*.csproj text eol=lf
+*.vbproj text eol=lf
+*.fsproj text eol=lf
+*.vcxproj text eol=lf
+*.vcproj text eol=lf
+*.dbproj text eol=lf
+*.wixproj text eol=lf
+*.modelproj text eol=lf
+*.sqlproj text eol=lf
+*.wwaproj text eol=lf
+*.xproj text eol=lf
+*.props text eol=lf
+*.filters text eol=lf
+*.vcxitems text eol=lf
+
+# 🦀 Rust - Systems Programming
+*.rs text eol=lf diff=rust
+*.rlib binary
+
+# 🐹 Go - Cloud & Microservices
+*.go text eol=lf diff=go
+*.mod text eol=lf
+*.sum text eol=lf
+
+# 🦸 Swift - iOS/macOS Development
+*.swift text eol=lf diff=swift
+*.playground text eol=lf diff=swift
+*.xcodeproj text eol=lf
+*.xcworkspace text eol=lf
+*.storyboard text eol=lf
+*.xib text eol=lf
+
+# 🤖 Android Development
+*.xml text eol=lf diff=xml
+*.gradle text eol=lf diff=gradle
+*.properties text eol=lf
+*.pro text eol=lf
+*.smali text eol=lf
+
+# 🔴 Ruby - Web & Automation
+*.rb text eol=lf diff=ruby
+*.rbw text eol=lf diff=ruby
+*.gem text eol=lf
+*.gemspec text eol=lf
+*.rake text eol=lf diff=ruby
+*.thor text eol=lf diff=ruby
+*.rabl text eol=lf diff=ruby
+*.ru text eol=lf diff=ruby
+*.builder text eol=lf diff=ruby
+*.rxml text eol=lf diff=ruby
+*.rjs text eol=lf diff=ruby
+*.podspec text eol=lf diff=ruby
+*.rbxs text eol=lf diff=ruby
+*.rbuild text eol=lf diff=ruby
+*.erb text eol=lf
+*.haml text eol=lf
+*.slim text eol=lf
+
+# 🟡 JavaScript Runtime & Frameworks
+*.mjs text eol=lf diff=javascript
+*.cjs text eol=lf diff=javascript
+*.coffee text eol=lf diff=coffeescript
+*.litcoffee text eol=lf diff=coffeescript
+*.ls text eol=lf diff=livescript
+*.dart text eol=lf diff=dart
+
+# 🔵 Shell & Scripting
+*.sh text eol=lf diff=bash
+*.bash text eol=lf diff=bash
+*.zsh text eol=lf diff=bash
+*.fish text eol=lf diff=bash
+*.ksh text eol=lf diff=bash
+*.csh text eol=lf diff=bash
+*.tcsh text eol=lf diff=bash
+*.ps1 text eol=lf diff=powershell
+*.psm1 text eol=lf diff=powershell
+*.psd1 text eol=lf diff=powershell
+*.ps1xml text eol=lf diff=powershell
+*.psc1 text eol=lf diff=powershell
+*.pssc text eol=lf diff=powershell
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 🔮 Functional Programming
+*.hs text eol=lf diff=haskell
+*.lhs text eol=lf diff=haskell
+*.elm text eol=lf diff=elm
+*.ex text eol=lf diff=elixir
+*.exs text eol=lf diff=elixir
+*.erl text eol=lf diff=erlang
+*.hrl text eol=lf diff=erlang
+*.ml text eol=lf diff=ocaml
+*.mli text eol=lf diff=ocaml
+*.sml text eol=lf diff=sml
+*.sig text eol=lf diff=sml
+*.fun text eol=lf diff=sml
+*.scm text eol=lf diff=scheme
+*.ss text eol=lf diff=scheme
+*.rkt text eol=lf diff=racket
+*.rktl text eol=lf diff=racket
+
+# 🗄️ Database & SQL
+*.sql text eol=lf diff=sql
+*.mysql text eol=lf diff=sql
+*.pgsql text eol=lf diff=sql
+*.sqlite text eol=lf diff=sql
+*.db binary
+*.sqlite3 binary
+*.mdb binary
+*.accdb binary
+*.frm binary
+*.myd binary
+*.myi binary
+*.ibd binary
+*.dbf binary
+
+# 📊 Data Science & Machine Learning
+*.csv text eol=lf
+*.tsv text eol=lf
+*.psv text eol=lf
+*.tab text eol=lf
+*.data text eol=lf
+*.dat binary
+*.arff text eol=lf
+*.libsvm text eol=lf
+*.mat binary
+*.npy binary
+*.npz binary
+*.h5 binary
+*.hdf5 binary
+*.pkl binary
+*.pickle binary
+*.joblib binary
+*.parquet binary
+*.feather binary
+*.arrow binary
+*.orc binary
+*.avro binary
+*.proto text eol=lf
+*.pb binary
+*.onnx binary
+*.tflite binary
+*.pt binary
+*.pth binary
+*.safetensors binary
+*.bin binary
+*.weights binary
+*.model binary
+*.checkpoint binary
+*.ckpt binary
+
+# 📈 R & Statistical Computing
+*.r text eol=lf diff=r
+*.R text eol=lf diff=r
+*.rmd text eol=lf diff=r
+*.Rmd text eol=lf diff=r
+*.rnw text eol=lf diff=r
+*.Rnw text eol=lf diff=r
+*.rd text eol=lf diff=r
+*.Rd text eol=lf diff=r
+*.rda binary
+*.rds binary
+*.RData binary
+
+# 🧮 MATLAB & Scientific Computing
+*.m text eol=lf diff=matlab
+*.mat binary
+*.fig binary
+*.mdl binary
+*.slx binary
+*.mlx binary
+*.mlapp binary
+*.mltbx binary
+*.mlpkginstall binary
+*.mexw32 binary
+*.mexw64 binary
+*.mexa64 binary
+*.mexmaci64 binary
+
+# 📊 Julia & Scientific Computing
+*.jl text eol=lf diff=julia
+*.jmd text eol=lf diff=julia
+
+# 🔢 Mathematical & Scientific
+*.nb binary
+*.ma text eol=lf
+*.mt text eol=lf
+*.wl text eol=lf
+*.wls text eol=lf
+*.m text eol=lf
+*.wxm text eol=lf
+*.sage text eol=lf diff=python
+*.spyx text eol=lf diff=python
+*.pyx text eol=lf diff=python
+
+# 📱 Mobile Development
+*.xaml text eol=lf
+*.axml text eol=lf
+*.axaml text eol=lf
+*.paml text eol=lf
+*.xam text eol=lf
+*.xib text eol=lf
+*.storyboard text eol=lf
+*.plist text eol=lf
+*.pbxproj text eol=lf
+*.xcscheme text eol=lf
+*.xcworkspacedata text eol=lf
+*.xcuserstate binary
+*.xcbkptlist text eol=lf
+*.xccheckout text eol=lf
+*.moved-aside text eol=lf
+*.xcuserstate binary
+*.xcscmblueprint text eol=lf
+
+# 🎮 Game Development
+*.unity binary
+*.unitypackage binary
+*.asset binary
+*.prefab binary
+*.fbx binary
+*.obj text eol=lf
+*.mtl text eol=lf
+*.blend binary
+*.3ds binary
+*.max binary
+*.maya binary
+*.mb binary
+*.ma binary
+*.dae text eol=lf
+*.x3d text eol=lf
+*.gltf text eol=lf
+*.glb binary
+*.usd binary
+*.usda text eol=lf
+*.usdc binary
+*.usdz binary
+*.abc binary
+*.vox binary
+*.qb binary
+*.qbt binary
+*.schematic binary
+*.mcmeta text eol=lf
+*.json text eol=lf
+*.mcfunction text eol=lf
+*.mcmeta text eol=lf
+*.nbt binary
+*.dat binary
+*.level binary
+*.cs text eol=lf diff=csharp
+*.cpp text eol=lf diff=cpp
+*.h text eol=lf diff=c
+*.hpp text eol=lf diff=cpp
+*.hlsl text eol=lf
+*.shader text eol=lf
+*.cginc text eol=lf
+*.compute text eol=lf
+*.cg text eol=lf
+*.glsl text eol=lf
+*.vert text eol=lf
+*.frag text eol=lf
+*.geom text eol=lf
+*.tesc text eol=lf
+*.tese text eol=lf
+*.comp text eol=lf
+*.spv binary
+
+# 🏗️ Build & Package Files
+*.jar binary
+*.war binary
+*.ear binary
+*.apk binary
+*.ipa binary
+*.xap binary
+*.appx binary
+*.msix binary
+*.whl binary
+*.egg binary
+*.gem binary
+*.deb binary
+*.rpm binary
+*.snap binary
+*.flatpak binary
+*.pkg binary
+*.dmg binary
+*.msi binary
+*.exe binary
+*.nupkg binary
+*.vsix binary
+*.tgz binary
+*.tar.gz binary
+*.tar.bz2 binary
+*.tar.xz binary
+*.rar binary
+*.7z binary
+*.cab binary
+*.iso binary
+*.wim binary
+*.swm binary
+*.esd binary
+
+# 🔧 Configuration Files
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+*.config text eol=lf
+*.toml text eol=lf
+*.xml text eol=lf diff=xml
+*.xaml text eol=lf
+*.plist text eol=lf
+*.properties text eol=lf
+*.settings text eol=lf
+*.prefs text eol=lf
+*.reg text eol=lf
+*.inf text eol=lf
+*.desktop text eol=lf
+*.service text eol=lf
+*.target text eol=lf
+*.timer text eol=lf
+*.mount text eol=lf
+*.automount text eol=lf
+*.swap text eol=lf
+*.socket text eol=lf
+*.device text eol=lf
+*.path text eol=lf
+*.slice text eol=lf
+*.scope text eol=lf
+
+# 📋 Documentation & Text Files
+*.txt text eol=lf
+*.rtf text eol=lf
+*.log text eol=lf
+*.out text eol=lf
+*.readme text eol=lf
+*.license text eol=lf
+*.changelog text eol=lf
+*.authors text eol=lf
+*.contributors text eol=lf
+*.copying text eol=lf
+*.install text eol=lf
+*.news text eol=lf
+*.todo text eol=lf
+*.history text eol=lf
+*.thanks text eol=lf
+*.man text eol=lf
+*.1 text eol=lf
+*.2 text eol=lf
+*.3 text eol=lf
+*.4 text eol=lf
+*.5 text eol=lf
+*.6 text eol=lf
+*.7 text eol=lf
+*.8 text eol=lf
+*.9 text eol=lf
+*.tex text eol=lf diff=tex
+*.ltx text eol=lf diff=tex
+*.sty text eol=lf diff=tex
+*.cls text eol=lf diff=tex
+*.dtx text eol=lf diff=tex
+*.ins text eol=lf diff=tex
+*.bib text eol=lf
+*.bst text eol=lf
+*.bbx text eol=lf
+*.cbx text eol=lf
+
+# 🔒 Security & Keys (Handle with care)
+*.key text eol=lf
+*.pem text eol=lf
+*.crt text eol=lf
+*.cer binary
+*.der binary
+*.p7b binary
+*.p7c binary
+*.p12 binary
+*.pfx binary
+*.jks binary
+*.keystore binary
+*.truststore binary
+*.pub text eol=lf
+*.gpg binary
+*.pgp binary
+*.sig binary
+*.asc text eol=lf
+
+# 🧪 Testing & Quality Assurance
+*.test text eol=lf
+*.spec text eol=lf
+*.feature text eol=lf
+*.story text eol=lf
+*.steps text eol=lf
+
+# 🚀 Full Stack Deployment & Infrastructure
+
+# 🐳 Containerization & Orchestration
+*.dockerfile text eol=lf
+Dockerfile text eol=lf
+Dockerfile.* text eol=lf
+*.dockerignore text eol=lf
+.dockerignore text eol=lf
+docker-compose*.yml text eol=lf
+docker-compose*.yaml text eol=lf
+compose.yml text eol=lf
+compose.yaml text eol=lf
+*.override.yml text eol=lf
+*.override.yaml text eol=lf
+*.docker text eol=lf
+*.container text eol=lf
+*.pod text eol=lf
+*.service text eol=lf
+*.deployment text eol=lf
+*.statefulset text eol=lf
+*.daemonset text eol=lf
+*.configmap text eol=lf
+*.secret text eol=lf
+*.ingress text eol=lf
+*.networkpolicy text eol=lf
+*.rbac text eol=lf
+*.pv text eol=lf
+*.pvc text eol=lf
+*.storageclass text eol=lf
+*.hpa text eol=lf
+*.vpa text eol=lf
+*.pdb text eol=lf
+*.endpoint text eol=lf
+*.endpointslice text eol=lf
+*.limitrange text eol=lf
+*.resourcequota text eol=lf
+*.namespace text eol=lf
+*.node text eol=lf
+*.cluster text eol=lf
+*.context text eol=lf
+kustomization.yaml text eol=lf
+kustomization.yml text eol=lf
+*.kustomization text eol=lf
+*.kustomize text eol=lf
+skaffold.yaml text eol=lf
+skaffold.yml text eol=lf
+tilt.yaml text eol=lf
+tilt.yml text eol=lf
+Tiltfile text eol=lf
+*.tilt text eol=lf
+okteto.yaml text eol=lf
+okteto.yml text eol=lf
+*.okteto text eol=lf
+devfile.yaml text eol=lf
+devfile.yml text eol=lf
+*.devfile text eol=lf
+.devcontainer.json text eol=lf
+devcontainer.json text eol=lf
+*.devcontainer text eol=lf
+*.podman text eol=lf
+*.buildah text eol=lf
+*.cri-o text eol=lf
+*.containerd text eol=lf
+*.runc text eol=lf
+*.kata text eol=lf
+*.gvisor text eol=lf
+*.firecracker text eol=lf
+*.microk8s text eol=lf
+*.k3s text eol=lf
+*.k3d text eol=lf
+*.kind text eol=lf
+*.minikube text eol=lf
+*.minishift text eol=lf
+*.openshift text eol=lf
+*.oc text eol=lf
+*.kubectl text eol=lf
+*.helm text eol=lf
+*.chart text eol=lf
+*.values text eol=lf
+Chart.yaml text eol=lf
+Chart.yml text eol=lf
+values.yaml text eol=lf
+values.yml text eol=lf
+values-*.yaml text eol=lf
+values-*.yml text eol=lf
+*.values text eol=lf
+requirements.yaml text eol=lf
+requirements.yml text eol=lf
+*.requirements text eol=lf
+*.release text eol=lf
+*.revision text eol=lf
+*.template text eol=lf
+*.gotmpl text eol=lf
+*.tpl text eol=lf
+*.helpers text eol=lf
+*.notes text eol=lf
+NOTES.txt text eol=lf
+*.istio text eol=lf
+*.linker
+
+# 📁 Normalize line endings for all text files (cross-platform compatibility)
+* text=auto
+
+# 🚫 Exclude certain files from diff/merge operations
+*.min.js binary
+*.min.css binary
+*bundle.js binary
+*bundle.css binary
+*-lock.json binary
+yarn.lock binary
+package-lock.json binary
+poetry.lock binary
+pipfile.lock binary
+gemfile.lock binary
+composer.lock binary
+*.cache binary
+*.tmp binary
+*.temp binary
+*.swp binary
+*.swo binary
+*.bak binary
+*.orig binary
+*.rej binary
+*.DS_Store binary
+Thumbs.db binary
+desktop.ini binary
+*.lnk binary
+*.url binary
+*.webloc binary
+
+# 🔄 Special handling for generated files
+*.generated.* binary
+*.auto.* binary
+*.compiled.* binary
+*build/* binary
+*dist/* binary
+*target/* binary
+*bin/* binary
+*obj/* binary
+*out/* binary
+*tmp/* binary
+*temp/* binary
+*cache/* binary
+*node_modules/* binary
+*venv/* binary
+*env/* binary
+*.venv/* binary
+*.env/* binary
+*__pycache__/* binary
+*.pyc binary
+*.pyo binary
+*.pyd binary
+*.class binary
+*.dex binary
+*.ap_ binary
+*.o binary
+*.so binary
+*.a binary
+*.lib binary
+*.dll binary
+*.exe binary
+*.app binary
+*.ipa binary
+*.apk binary
+*.aab binary
