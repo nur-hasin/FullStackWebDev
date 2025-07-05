@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment</title>
+    </head>
+
+    <body>
+        <!-- Qs1 -->
+        <table border="black">
+            <caption>Student Information</caption>
+            <tr>
+                <th rowspan="6">Info</th>
+                <th rowspan="2">Name</th>
+                <th colspan="2">Address</th>
+            </tr>
+            <tr>
+                <th>City</th>
+                <th>House</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>Rajshahi</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>Dhaka</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>Chittagong</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>Sylhet</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- Qs2 -->
+        <form action="/server">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <br><br>
+
+            <label for="sex">Sex:</label>
+            <input type="radio" name="sex" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="sex" id="female" value="female">
+            <label for="female">Female</label>
+            <br><br>
+
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="" disabled selected>Select an option</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="india">India</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="china">China</option>
+                <option value="usa">USA</option>
+            </select>
+            <br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea name="message" id="message" rows="4" cols="30"></textarea>
+            <br><br>
+
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <label for="newsletter">Subscribe?</label>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <br>
+
+        <!-- Qs3 -->
+        <h2>Feedback Form</h2>
+        <form action="/contract">
+            <label for="nam">Name:</label>
+            <input type="text" id="nam" placeholder="Write your name">
+            <br><br>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" placeholder="Write your email">
+            <br><br>
+
+            <label for="msg">Message:</label><br>
+            <textarea name="message" id="msg" rows="4" cols="30"></textarea>
+            <br><br>
+
+            <label for="rating">Rate us our of 5:</label><br>
+            <input type="radio" name="rating" id="one" value="1">
+            <label for="one">1</label><br>
+            <input type="radio" name="rating" id="two" value="2">
+            <label for="two">2</label><br>
+            <input type="radio" name="rating" id="three" value="3">
+            <label for="three">3</label><br>
+            <input type="radio" name="rating" id="four" value="4">
+            <label for="four">4</label><br>
+            <input type="radio" name="rating" id="five" value="5">
+            <label for="five">5</label>
+            <br><br>
+
+            <button type="submit">Send your message!</button>
+        </form>
+    </body>
+
+</html>
