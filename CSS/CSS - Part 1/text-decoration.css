@@ -1,0 +1,15 @@
+h1 {
+    text-decoration: dashed red underline;
+}
+
+h3 {
+    text-decoration: double pink line-through;
+}
+
+h2 {
+    text-decoration: overline 5px;
+}
+
+a {
+    text-decoration: none;
+}
