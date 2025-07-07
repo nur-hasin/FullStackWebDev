@@ -1,0 +1,8 @@
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+h3:hover {
+    text-decoration: underline;
+}

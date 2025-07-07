@@ -1,0 +1,11 @@
+div {
+    background-color: lightblue;
+}
+
+form {
+    background-color: lightgreen;
+}
+
+input, button {
+    background-color: inherit;
+}
