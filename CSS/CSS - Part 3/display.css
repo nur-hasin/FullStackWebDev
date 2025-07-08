@@ -1,0 +1,22 @@
+h1 {
+    display: inline;
+    background-color: lightgreen;
+}
+
+span {
+    display: block;
+    background-color: salmon;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    margin: 5px;
+    display: inline-block;
+}
+
+#second {
+    display: none;
+}
