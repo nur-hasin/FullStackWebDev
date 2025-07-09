@@ -1,0 +1,15 @@
+div { 
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border: 3px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+
+#second {
+    background-color: yellow;
+    position: relative;
+    top: 200px;
+    left: 100px;
+}
