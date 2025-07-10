@@ -1,0 +1,37 @@
+#container {
+    height: 600px;
+    width: 60%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 100px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#org {
+    align-self: flex-strat;
+    flex: 2 2 100px;
+}
+
+#blue {
+    flex-shrink: 2;
+}
+
+#yellow {
+    flex: 3;
+}
