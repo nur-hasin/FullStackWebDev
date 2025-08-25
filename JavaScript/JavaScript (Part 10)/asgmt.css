@@ -1,0 +1,19 @@
+#box {
+    width: 150px;
+    height: 150px;
+    background: lightblue;
+}
+
+#scrollBox {
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+}
+
+#scrollBox p {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+}
