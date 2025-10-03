@@ -1,0 +1,12 @@
+{
+  "name": "import-file",
+  "version": "1.0.0",
+  "description": "using import module",
+  "main": "module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hasin",
+  "license": "ISC",
+  "type": "module"
+}
