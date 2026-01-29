@@ -5,8 +5,8 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 
-app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
@@ -102,7 +102,7 @@ app.get('/user', (req, res) => {
         connection.query(q, (err, result) => {
             if (err) throw err;
             let data = result;
-            res.render('show-users.ejs', { data });
+            res.render('users.ejs', { data });
         });
     } catch (err) {
         res.send('some error in DB');
@@ -118,7 +118,7 @@ app.get('/user/:id/edit', (req, res) => {
         connection.query(q, (err, result) => {
             if (err) throw err;
             let user = result[0];
-            res.render('edit-users.ejs', { user });
+            res.render('edit.ejs', { user });
         });
     } catch (err) {
         res.send('some error in DB');
@@ -137,10 +137,10 @@ app.patch('/user/:id', (req, res) => {
             let user = result[0];
 
             if (formPass != user.password) {
-                res.send('wrong password');
+                res.send('wrong password entered!');
             } else {
                 let q2 = `UPDATE user SET username='${newUsername}' where id='${id}'`;
-                
+
                 connection.query(q2, (err, result) => {
                     if (err) throw err;
                     res.redirect('/user');
@@ -154,10 +154,67 @@ app.patch('/user/:id', (req, res) => {
 });
 
 // add route
+app.get('/user/new', (req, res) => {
+    res.render('new.ejs');
+});
 
+app.post('/user/new', (req, res) => {
+    let { username, email, password } = req.body;
+    let id = faker.string.uuid();
+    let q = `INSERT INTO user (id, username, email, password) VALUES (?, ?, ?, ?)`;
+
+    try {
+        connection.query(q, [id, username, email, password], (err, result) => {
+            if (err) throw err;
+            res.redirect('/user');
+        });
+    } catch (err) {
+        res.send('some error in DB');
+    }
+});
 
 // delete route
+app.get('/user/:id/delete', (req, res) => {
+    let { id } = req.params;
+    let q = `SELECT * FROM user WHERE id='${id}'`;
 
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            let user = result[0];
+            res.render('delete.ejs', { user });
+        });
+    } catch (err) {
+        res.send('some error in DB');
+    }
+});
+
+app.delete('/user/:id', (req, res) => {
+    let { id } = req.params;
+    let { password: formPass } = req.body;
+    let q = `SELECT * FROM user WHERE id='${id}'`;
+
+    try {
+        connection.query(q, (err, result) => {
+            if (err) throw err;
+            let user = result[0];
+
+            if (formPass != user.password) {
+                res.send('wrong password entered!');
+            } else {
+                let q2 = `DELETE FROM user WHERE id='${id}'`;
+
+                connection.query(q2, (err, result) => {
+                    if (err) throw err;
+                    res.redirect('/user');
+                });
+            }
+        });
+    } catch (err) {
+        console.log(err);
+        res.send('some error in DB');
+    }
+});
 
 app.listen('8080', () => {
     console.log('server is listening to port 8080');
