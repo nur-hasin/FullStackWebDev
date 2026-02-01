@@ -10,3 +10,5 @@ db.student.insertMany([{ name: "joo", marks: 89, city: "Dhaka" }, { name: "koi",
 
 db.student.find()
 
+db.student.insertOne({ name: 'rui', performance: { marks: 89, grade: 'A' } })
+db.student.find({ 'performance.marks': 89 })
