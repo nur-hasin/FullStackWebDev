@@ -45,7 +45,7 @@ app.get("/chats/new", (req, res) => {
 });
 
 // create route
-app.post("/chats/new", async (req, res) => {
+app.post("/chats", async (req, res) => {
     try {
         let { from: newFrom, to: newTo, msg: newMsg } = req.body;
         let newChat = new Chat({
