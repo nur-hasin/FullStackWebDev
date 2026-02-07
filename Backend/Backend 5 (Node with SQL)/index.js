@@ -94,7 +94,7 @@ app.get('/', (req, res) => {
     }
 });
 
-// show route
+// index route
 app.get('/user', (req, res) => {
     let q = `SELECT * FROM user`;
 
@@ -153,12 +153,13 @@ app.patch('/user/:id', (req, res) => {
     }
 });
 
-// add route
+// new route
 app.get('/user/new', (req, res) => {
     res.render('new.ejs');
 });
 
-app.post('/user/new', (req, res) => {
+// create route
+app.post('/user', (req, res) => {
     let { username, email, password } = req.body;
     let id = faker.string.uuid();
     let q = `INSERT INTO user (id, username, email, password) VALUES (?, ?, ?, ?)`;
@@ -173,7 +174,7 @@ app.post('/user/new', (req, res) => {
     }
 });
 
-// delete route
+// delete confirmation route
 app.get('/user/:id/delete', (req, res) => {
     let { id } = req.params;
     let q = `SELECT * FROM user WHERE id='${id}'`;
@@ -189,6 +190,7 @@ app.get('/user/:id/delete', (req, res) => {
     }
 });
 
+// delete route
 app.delete('/user/:id', (req, res) => {
     let { id } = req.params;
     let { password: formPass } = req.body;
