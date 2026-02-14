@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h3>All Chats</h3>
+
+    <form action="/chats/new" method="GET">
+        <button type="submit">New Chat</button>
+    </form>
+    <br><br>
+
+    <% for(let chat of chats) { %>
+        <div class="chat">
+            <p>
+                From: <span class="name">
+                    <%= chat.from %>
+                </span>
+            </p>
+
+            <div class="msg">
+                <p>
+                    <%= chat.msg %>
+                </p>
+
+                <div>
+                    <form class="btn" action="/chats/<%= chat._id %>/show" method="GET">
+                        <button>Chat Details</button>
+                    </form> 
+                </div>
+            </div>
+
+            <p>
+                To: <span class="name">
+                    <%= chat.to %>
+                </span>
+            </p>
+            
+            <hr>
+
+            <% let time = chat.updated_at || chat.created_at; %>
+            <p>
+                Time: <%= time.toString().split(" ")[4] %>
+                &nbsp;
+                Date: <%= time.toString().split(" ").splice(1, 3).join("/") %>
+            </p>
+        </div>
+        <br><br>
+        <% } %>
+</body>
+
+</html>

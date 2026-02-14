@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h3>Chat Details</h3>
+
+    <div class="chat">
+        <p>
+            From: <span class="name">
+                <%= chat.from %>
+            </span>
+        </p>
+    
+        <div class="msg">
+            <p>
+                <%= chat.msg %>
+            </p>
+        </div>
+    
+        <p>
+            To: <span class="name">
+                <%= chat.to %>
+            </span>
+        </p>
+    
+        <hr>
+    
+        <% let time=chat.updated_at || chat.created_at; %>
+            <p>
+                Time: <%= time.toString().split(" ")[4] %>
+                &nbsp;
+                Date: <%= time.toString().split(" ").splice(1, 3).join(" /") %>
+            </p>
+
+        <form class="btn" action="/chats/<%= chat._id %>/edit" method="GET">
+            <button>Edit</button>
+        </form>
+    
+        <form class="btn" action="/chats/<%= chat._id %>?_method=DELETE" method="POST">
+            <button onclick="return showConfirm()">Delete</button>
+        </form>
+    </div>
+
+    <script src="/delete-confirmation.js"></script>
+</body>
+
+</html>
