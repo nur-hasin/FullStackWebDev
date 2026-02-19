@@ -30,11 +30,12 @@ async function main() {
     await mongoose.connect(MONGO_URL);
 };
 
+// Input Validation
 const validateListing = (req, res, next) => {
     let { error } = listingSchema.validate(req.body);
     if (error) {
-        let errMsg = error.details.map((el) => el.message).join(',');
-        throw new ExpressError(400, errMsg);
+        let errMsg = error.details.map((el) => el.message).join(', ');
+        return next(new ExpressError(400, errMsg));
     } else {
         next();
     }
@@ -95,12 +96,13 @@ app.delete('/listings/:id', wrapAsync(async (req, res) => {
     res.redirect('/listings');
 }));
 
+// 404 handler
 app.use((req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
 });
 
+// error handler
 app.use((err, req, res, next) => {
-    console.log(err);
     let { statusCode = 500, message = 'someting went wrong!' } = err;
     res.status(statusCode).render('error.ejs', { message });
 });
