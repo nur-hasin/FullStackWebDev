@@ -1,0 +1,25 @@
+<% if(success.length> 0) { %>
+    <div class="d-flex justify-content-center">
+        <div class="alert alert-success alert-dismissible fade show flash-alert d-flex align-items-center lg-col-3 md-col-3 sm-col-3 shadow-sm"
+            role="alert">
+            <i class="fa-solid fa-circle-check pe-4"></i>
+            <span class="fw-semibold pe-3">
+                <%= success %>
+            </span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+<% } %>
+
+<% if(error.length> 0) { %>
+    <div class="d-flex justify-content-center">
+        <div class="alert alert-danger alert-dismissible fade show flash-alert d-flex align-items-center lg-col-3 md-col-3 sm-col-3 shadow-sm"
+            role="alert">
+            <i class="fa-solid fa-triangle-exclamation pe-4"></i>
+            <span class="fw-semibold pe-3">
+                <%= error %>
+            </span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+<% } %>
