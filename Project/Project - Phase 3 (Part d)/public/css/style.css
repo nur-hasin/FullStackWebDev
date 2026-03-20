@@ -1,0 +1,113 @@
+/* BASE */
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    padding: 2rem 0 2rem;
+}
+
+/* FOOTER */
+footer {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.f-info {
+    text-decoration: none;
+}
+
+.f-info:hover {
+    text-decoration: underline;
+}
+
+.f-socials {
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
+.f-socials:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+/* index page */
+.listing-card {
+    border: none !important;
+    margin-bottom: 1.7rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
+        display: block !important;
+        min-height: unset !important;
+        max-height: unset !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-title {
+    font-weight: 600 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* show page */
+.show-img {
+    height: 50vh;
+    object-fit: cover;
+}
+
+/* flash */
+.flash-alert .btn-close:hover {
+    box-shadow: none;
+}
+
+/* map */
+#map {
+    height: 300px;
+    border-radius: 10px;
+}
+
+.mapboxgl-popup-close-button:hover {
+    background: transparent !important;
+}
+
+.mapboxgl-popup-close-button:focus {
+    outline: none !important;
+}
+
+.mapboxgl-popup-content {
+    padding: 10px !important;
+}
+
+.mapboxgl-popup-content h6 {
+    font-weight: 600;
+}
+
+.mapboxgl-popup-content p {
+    margin: 0 !important;
+    font-size: 14px;
+    color: #555;
+}
+

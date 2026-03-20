@@ -1,0 +1,721 @@
+/* NAVBAR */
+.navbar {
+    height: 5rem;
+    background-color: white !important;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+    padding: 1.1rem 0;
+}
+
+.navbar-brand i {
+    color: #fe424d;
+    font-size: 2.5rem;
+}
+
+.navbar-brand span {
+    color: #fe424d;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #222;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 25px !important;
+}
+
+.nav-link:hover {
+    background-color: #f2f2f2 !important;
+}
+
+.navbar-toggler {
+    font-size: small;
+    border-radius: 25px;
+}
+
+.navbar-toggler:hover {
+    background-color: #f2f2f2 !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.container-fluid {
+    background-color: white;
+    text-align: center;
+}
+
+.show {
+    padding-bottom: 0.5rem;
+}
+
+/* SEARCH BAR */
+.search-shell {
+    flex: 1;
+    max-width: 580px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-search-bar {
+    display: flex;
+    align-items: stretch;
+    background: white;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 999px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.25s, border-color 0.25s;
+    overflow: visible;
+}
+
+.nav-search-bar:focus-within {
+    border-color: #fe424d;
+    box-shadow: 0 4px 20px rgba(254, 66, 77, 0.15);
+}
+
+.search-seg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 18px;
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: background 0.18s;
+    position: relative;
+}
+
+.search-seg+.search-seg::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: #e8e8e8;
+    transition: opacity 0.18s;
+}
+
+.search-seg:focus-within+.search-seg::before,
+.search-seg:has(+ .search-seg:focus-within)::before {
+    opacity: 0;
+}
+
+.search-seg:hover {
+    background: #f7f7f7;
+}
+
+.search-seg:focus-within {
+    background: #fff5f5;
+}
+
+.search-seg-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #222;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.seg-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fe424d;
+    opacity: 0;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.search-seg:focus-within .seg-dot {
+    opacity: 1;
+}
+
+.search-seg input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    color: #222;
+    font-family: inherit;
+    width: 100%;
+    padding: 0;
+}
+
+.search-seg input::placeholder {
+    color: #bbb;
+    font-weight: 400;
+}
+
+.search-seg-guests {
+    flex: 0.7;
+}
+
+.search-seg input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    cursor: pointer;
+}
+
+.search-seg input[type="date"] {
+    position: relative;
+}
+
+.nav-search-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fe424d 0%, #ff6b35 100%);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 4px 4px 4px 0;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(254, 66, 77, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-search-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(254, 66, 77, 0.5);
+}
+
+.nav-search-btn:active {
+    transform: scale(0.95);
+}
+
+/* suggestion chips */
+.search-chips {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 18px;
+    padding: 14px 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border: 1px solid #f0f0f0;
+    z-index: 1050;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.search-shell:focus-within .search-chips {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.chips-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.chips-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.search-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1.5px solid #f0f0f0;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, color 0.15s;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.search-chip:hover {
+    border-color: #fe424d;
+    background: #fff5f5;
+    color: #fe424d;
+}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE SEARCH BUTTON
+   ══════════════════════════════════════════════════════ */
+.nav-mobile-search {
+    background: white;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 999px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.nav-mobile-search:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE SEARCH DROPDOWN
+   ✅ centered, no cropping, box-sizing everywhere
+   ══════════════════════════════════════════════════════ */
+.mobile-search-collapse {
+    background: white;
+    border-top: 1px solid #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-search-form {
+    width: 100%;
+    max-width: 480px;
+    /* ✅ centered max width */
+    margin: 0 auto;
+    /* ✅ center on all screens */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+    /* ✅ no overflow */
+}
+
+.mobile-search-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+    /* ✅ prevents flex overflow */
+    box-sizing: border-box;
+}
+
+.mobile-search-field label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #222;
+}
+
+.mobile-search-field input {
+    border: 1.5px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 11px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    /* ✅ critical — prevents cropping */
+    min-width: 0;
+}
+
+.mobile-search-field input:focus {
+    border-color: #fe424d;
+}
+
+.mobile-search-field input::placeholder {
+    color: #bbb;
+}
+
+.mobile-search-field input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.mobile-search-submit {
+    background: linear-gradient(135deg, #fe424d 0%, #ff6b35 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(254, 66, 77, 0.35);
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.mobile-search-submit:hover {
+    opacity: 0.92;
+}
+
+.mobile-search-submit:active {
+    transform: scale(0.98);
+}
+
+/* ── Desktop search bar ───────────────────────────────── */
+.nav-search-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 14rem;
+        /* ✅ centers in navbar */
+        padding: 0 5rem;
+}
+
+.nav-search-wrap {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    /* ✅ 1.5rem+ pill shape */
+    background: white;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* each field */
+.nav-search-field {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    flex: 1;
+    min-width: 90px;
+    cursor: pointer;
+}
+
+.nav-search-field:hover {
+    background: #f7f7f7;
+    border-radius: 25rem;
+}
+
+.nav-search-field label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin: 0 0 2px 0;
+    cursor: pointer;
+}
+
+.nav-search-field input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 500;
+    color: #222;
+    font-family: inherit;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-search-field input::placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+/* ── Date input styling ───────────────────────────────── */
+/* ── Date input wrap ──────────────────────────────────── */
+.date-input-wrap {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    height: 22px;
+}
+
+/* ✅ completely hide native date rendering */
+.date-hidden-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+/* ✅ display span shows custom text */
+.date-display {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 400;
+    color: #bbb;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 1;
+    line-height: 1;
+}
+
+.date-input-wrap.has-value .date-display {
+    color: #222;
+    font-weight: 500;
+}
+
+/* mobile */
+.mobile-date-wrap {
+    position: relative;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 11px 14px;
+    box-sizing: border-box;
+    min-height: 46px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.mobile-date-wrap:focus-within {
+    border-color: #fe424d;
+}
+
+.mobile-date-wrap .date-hidden-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mobile-date-wrap .date-display {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 400;
+    color: #bbb;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mobile-date-wrap.has-value .date-display {
+    color: #222;
+    font-weight: 500;
+}
+/* search submit button */
+.nav-search-btn {
+    background: #fe424d;
+    /* ✅ Airbnb red */
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: background 0.2s, transform 0.15s;
+    flex-shrink: 0;
+}
+
+.nav-search-btn:hover {
+    background: #e0313b;
+    transform: scale(1.06);
+}
+
+.nav-search-btn:active {
+    transform: scale(0.96);
+}
+
+/* ── Mobile search icon button ────────────────────────── */
+.nav-mobile-search {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 2rem;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+    font-family: inherit;
+    font-weight: 500;
+    transition: box-shadow 0.2s;
+}
+
+.nav-mobile-search::after {
+    content: "Search";
+    font-size: 13px;
+}
+
+.nav-mobile-search:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Mobile search dropdown form ──────────────────────── */
+.mobile-search-form {
+    padding: 16px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+}
+
+.mobile-search-row {
+    display: flex;
+    gap: 10px;
+}
+
+.mobile-search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.mobile-search-field label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mobile-search-field input {
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+
+.mobile-search-field input:focus {
+    border-color: #222;
+}
+
+.mobile-search-field input::placeholder {
+    color: #aaa;
+}
+
+.mobile-search-submit {
+    background: #fe424d;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.mobile-search-submit:hover {
+    background: #e0313b;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+
+/* medium screens — shrink search fields */
+@media (max-width: 1100px) {
+    .nav-search-field {
+        padding: 10px 12px;
+    }
+
+    .nav-search-field label {
+        font-size: 9px;
+    }
+
+    .nav-search-field input {
+        font-size: 12px;
+    }
+}
+
+/* tablet — hide date fields, keep Where + Guests + button */
+@media (max-width: 900px) {
+
+    .nav-search-field:nth-child(2),
+    .nav-search-field:nth-child(3) {
+        display: none;
+    }
+}
+
+/* mobile — hide desktop search entirely */
+@media (max-width: 767px) {
+    .nav-search-form {
+        display: none !important;
+    }
+
+    .navbar {
+        min-height: 4rem;
+    }
+}
+
+/* hide mobile search btn on desktop */
+@media (min-width: 768px) {
+    .nav-mobile-search {
+        display: none !important;
+    }
+}

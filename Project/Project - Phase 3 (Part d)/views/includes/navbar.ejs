@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-end" href="/listings">
+      <i class="bx bx-home-heart"></i>
+      <span>Stayly</span>
+    </a>
+
+    <!-- Desktop search — only on md+ -->
+    <form class="nav-search-form d-none d-md-flex" action="/listings" method="GET">
+      <div class="nav-search-wrap">
+        <div class="nav-search-field border-end">
+          <label>Where</label>
+          <input type="text" name="location" placeholder="Search destinations" autocomplete="off" />
+        </div>
+        <div class="nav-search-field border-end">
+          <label>Check in</label>
+          <div class="date-input-wrap">
+            <span class="date-display" id="display-checkin">Start date</span>
+            <input type="date" name="checkin" id="input-checkin" class="date-hidden-input"
+              onchange="updateDateDisplay('input-checkin','display-checkin')" />
+          </div>
+        </div>
+        <div class="nav-search-field border-end">
+          <label>Check out</label>
+          <div class="date-input-wrap">
+            <span class="date-display" id="display-checkout">End date</span>
+            <input type="date" name="checkout" id="input-checkout" class="date-hidden-input"
+              onchange="updateDateDisplay('input-checkout','display-checkout')" />
+          </div>
+        </div>
+        <div class="nav-search-field">
+          <label>Guests</label>
+          <input type="number" name="guests" placeholder="Add guests" min="1" />
+        </div>
+        <button type="submit" class="nav-search-btn" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </form>
+    
+    <!-- Mobile search button — only on sm -->
+    <button class="nav-mobile-search d-flex d-md-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#mobileSearch" aria-expanded="false" aria-controls="mobileSearch">
+      <i class="bi bi-search"></i>
+    </button>
+    
+    <!-- Nav toggler -->
+    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings/new">Host a Stay</a>
+        <% if (!currentUser) { %>
+          <a class="nav-link" href="/Signup">Sign up</a>
+          <a class="nav-link" href="/Signin">Sign in</a>
+          <% } %>
+            <% if (currentUser) { %>
+              <a class="nav-link" href="/Signout">Sign out</a>
+              <% } %>
+      </div>
+    </div>
+    
+    </div>
+    
+    <!-- ✅ Mobile search — OUTSIDE container-fluid, expands BELOW navbar -->
+    <div class="collapse" id="mobileSearch">
+      <div class="mobile-search-collapse">
+        <form class="mobile-search-form" action="/listings" method="GET">
+          <div class="mobile-search-field">
+            <label>Where</label>
+            <input type="text" name="location" placeholder="Search destinations" autocomplete="off" />
+          </div>
+          <div class="mobile-search-row">
+            <div class="mobile-search-field">
+              <label>Check in</label>
+              <div class="date-input-wrap mobile-date-wrap">
+                <span class="date-display" id="display-mob-checkin">Start date</span>
+                <input type="date" name="checkin" id="input-mob-checkin" class="date-hidden-input"
+                  onchange="updateDateDisplay('input-mob-checkin','display-mob-checkin')" />
+              </div>
+            </div>
+            <div class="mobile-search-field">
+              <label>Check out</label>
+              <div class="date-input-wrap mobile-date-wrap">
+                <span class="date-display" id="display-mob-checkout">End date</span>
+                <input type="date" name="checkout" id="input-mob-checkout" class="date-hidden-input"
+                  onchange="updateDateDisplay('input-mob-checkout','display-mob-checkout')" />
+              </div>
+            </div>
+          </div>
+          <div class="mobile-search-field">
+            <label>Guests</label>
+            <input type="number" name="guests" placeholder="Add guests" min="1" />
+          </div>
+          <button type="submit" class="mobile-search-submit">
+            <i class="bi bi-search"></i> 
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    </nav>

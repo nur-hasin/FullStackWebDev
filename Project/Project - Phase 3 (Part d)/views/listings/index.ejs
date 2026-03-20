@@ -1,0 +1,388 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+  <body>
+
+    <!-- ══════════════════════════════════════════════════
+       CATEGORY SECTION
+       ══════════════════════════════════════════════════ -->
+    <section class="category-section">
+
+      <!-- Row 1: heading + controls -->
+      <div class="category-section-header">
+        <h1 class="category-section-title">Explore Stays</h1>
+        <div class="category-section-controls">
+
+          <button class="filter-btn-header" id="filterOpenBtn" data-bs-toggle="modal" data-bs-target="#filterModal">
+            <i class="fa-solid fa-sliders"></i>
+            <span class="filter-btn-text">Refine</span>
+            <span class="filter-count-badge d-none" id="filterCountBadge">0</span>
+          </button>
+
+          <label class="tax-toggle-wrap" for="taxToggle">
+            <span class="tax-label-full">Pre-Tax Total</span>
+            <span class="tax-label-short">Pre-Tax</span>
+            <span class="toggle-switch">
+              <input type="checkbox" id="taxToggle" />
+              <span class="toggle-track"></span>
+            </span>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Row 2: category scroll bar -->
+      <div class="category-wrapper">
+
+        <button class="scroll-btn left-btn hidden" type="button" aria-label="Scroll left">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="category-scroll">
+          <div class="category-item active">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <span>Trending</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <span>Recommended</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-star"></i>
+            <span>Top Rated</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-tag"></i>
+            <span>Budget</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Last Minute</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            <span>Beachfront</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-mountain"></i>
+            <span>Mountain</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-city"></i>
+            <span>City</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-tractor"></i>
+            <span>Countryside</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-leaf"></i>
+            <span>Tropical</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-wifi"></i>
+            <span>Work Ready</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-laptop"></i>
+            <span>Nomad</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Eco Stay</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Tiny Homes</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-tree"></i>
+            <span>Treehouse</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-chess-rook"></i>
+            <span>Castles</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-campground"></i>
+            <span>Camping</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-snowflake"></i>
+            <span>Arctic</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-robot"></i>
+            <span>Futuristic</span>
+          </div>
+          <div class="category-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Nearby</span>
+          </div>
+        </div>
+
+        <button class="scroll-btn right-btn" type="button" aria-label="Scroll right">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+       LISTINGS GRID
+       ══════════════════════════════════════════════════ -->
+    <div class="listings-grid">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        <% for (let listing of allListings) { %>
+          <div class="col">
+            <a href="/listings/<%= listing._id %>" class="listing-link">
+              <div class="card listing-card">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="<%= listing.title %>">
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <h6 class="card-title mt-1 mb-1">
+                    <%= listing.title %>
+                  </h6>
+                  <p class="card-text text-muted">
+                    <%= listing.price.toLocaleString('en-US', { style: 'currency' , currency: 'USD' ,
+                      minimumFractionDigits: 0 }) %>/night
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <% } %>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+       FILTER MODAL
+       ══════════════════════════════════════════════════ -->
+    <div class="modal fade filter-modal" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="filterModalLabel">Filters</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="filter-block">
+              <p class="filter-block-title">Price range</p>
+              <p class="filter-block-subtitle">Nightly prices before taxes &amp; fees</p>
+              <div class="price-inputs-row">
+                <div class="price-box">
+                  <span class="price-box-label">Min price</span>
+                  <input type="number" id="fPriceMin" value="500" min="0" max="50000" />
+                </div>
+                <div class="price-box">
+                  <span class="price-box-label">Max price</span>
+                  <input type="number" id="fPriceMax" value="15000" min="0" max="50000" />
+                </div>
+              </div>
+              <div class="dual-range-wrap">
+                <div class="dual-range-track"></div>
+                <div class="dual-range-fill" id="fRangeFill"></div>
+                <input type="range" id="fRangeMin" min="0" max="50000" value="500" step="100" />
+                <input type="range" id="fRangeMax" min="0" max="50000" value="15000" step="100" />
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <p class="filter-block-title">Rooms &amp; beds</p>
+              <div class="counter-row">
+                <div class="counter-label">Bedrooms</div>
+                <div class="counter-controls">
+                  <button class="counter-btn" data-counter="bedrooms" data-dir="-1" disabled>−</button>
+                  <span class="counter-value" id="val-bedrooms">0</span>
+                  <button class="counter-btn" data-counter="bedrooms" data-dir="1">+</button>
+                </div>
+              </div>
+              <div class="counter-row">
+                <div class="counter-label">Beds</div>
+                <div class="counter-controls">
+                  <button class="counter-btn" data-counter="beds" data-dir="-1" disabled>−</button>
+                  <span class="counter-value" id="val-beds">0</span>
+                  <button class="counter-btn" data-counter="beds" data-dir="1">+</button>
+                </div>
+              </div>
+              <div class="counter-row">
+                <div class="counter-label">
+                  Bathrooms
+                  <small>Private only</small>
+                </div>
+                <div class="counter-controls">
+                  <button class="counter-btn" data-counter="bathrooms" data-dir="-1" disabled>−</button>
+                  <span class="counter-value" id="val-bathrooms">0</span>
+                  <button class="counter-btn" data-counter="bathrooms" data-dir="1">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <p class="filter-block-title">Property type</p>
+              <div class="type-chip-grid">
+                <div class="type-chip"><i class="fa-solid fa-house"></i><span>Entire home</span></div>
+                <div class="type-chip"><i class="fa-solid fa-door-open"></i><span>Private room</span></div>
+                <div class="type-chip"><i class="fa-solid fa-hotel"></i><span>Hotel room</span></div>
+                <div class="type-chip"><i class="fa-solid fa-people-roof"></i><span>Shared room</span></div>
+                <div class="type-chip"><i class="fa-solid fa-water"></i><span>Houseboat</span></div>
+                <div class="type-chip"><i class="fa-solid fa-campground"></i><span>Cabin / Camp</span></div>
+                <div class="type-chip"><i class="fa-solid fa-chess-rook"></i><span>Castle</span></div>
+                <div class="type-chip"><i class="fa-solid fa-tree"></i><span>Treehouse</span></div>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <p class="filter-block-title">Amenities</p>
+              <div class="amenity-grid">
+                <label class="amenity-label">
+                  <input type="checkbox" value="pool" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Pool</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="hot-tub" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Hot tub</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="parking" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Free parking</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="ev-charger" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">EV charger</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="ac" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Air conditioning</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="workspace" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Workspace</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="wifi" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Wifi</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="kitchen" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Kitchen</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="washer" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Washer</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="dryer" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Dryer</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="bbq" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">BBQ grill</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="beach-access" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Beach access</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="ski" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Ski-in / Ski-out</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="fireplace" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Fireplace</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="gym" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Gym</span>
+                </label>
+                <label class="amenity-label">
+                  <input type="checkbox" value="pets" />
+                  <div class="amenity-check-box"><i class="fa-solid fa-check"></i></div>
+                  <span class="amenity-text">Pet friendly</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <p class="filter-block-title">Guest rating</p>
+              <div class="rating-row">
+                <div class="rating-pill selected" data-rating="any">Any</div>
+                <div class="rating-pill" data-rating="3">
+                  <i class="fa-solid fa-star"></i> 3+
+                </div>
+                <div class="rating-pill" data-rating="3.5">
+                  <i class="fa-solid fa-star"></i> 3.5+
+                </div>
+                <div class="rating-pill" data-rating="4">
+                  <i class="fa-solid fa-star"></i> 4.0+
+                </div>
+                <div class="rating-pill" data-rating="4.5">
+                  <i class="fa-solid fa-star"></i> 4.5+
+                </div>
+                <div class="rating-pill" data-rating="4.8">
+                  <i class="fa-solid fa-star"></i> 4.8+
+                  <small style="font-size:11px;color:#717171;margin-left:2px">Top</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <p class="filter-block-title">Booking options</p>
+              <div class="booking-pills">
+                <div class="booking-pill">Instant book</div>
+                <div class="booking-pill">Self check-in</div>
+                <div class="booking-pill">Free cancellation</div>
+                <div class="booking-pill">Allows pets</div>
+                <div class="booking-pill">Superhost only</div>
+              </div>
+            </div>
+
+            <div class="filter-block">
+              <p class="filter-block-title">Host language</p>
+              <div class="lang-pills">
+                <div class="lang-pill">English</div>
+                <div class="lang-pill">Bengali</div>
+                <div class="lang-pill">Hindi</div>
+                <div class="lang-pill">French</div>
+                <div class="lang-pill">Spanish</div>
+                <div class="lang-pill">Arabic</div>
+                <div class="lang-pill">Japanese</div>
+                <div class="lang-pill">German</div>
+                <div class="lang-pill">Portuguese</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button class="filter-clear-btn" id="fClearAll">Clear all</button>
+            <button class="filter-apply-btn" id="fApply">
+              Show results
+              <i class="fa-solid fa-arrow-right" style="margin-left:6px;font-size:12px;"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
