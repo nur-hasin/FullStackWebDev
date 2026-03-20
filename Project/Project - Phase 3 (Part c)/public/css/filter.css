@@ -1,0 +1,541 @@
+/* ══════════════════════════════════════════════════════
+   FILTER MODAL
+   ══════════════════════════════════════════════════════ */
+.filter-modal .modal-dialog {
+    max-width: 620px;
+}
+
+.filter-modal .modal-content {
+    border-radius: 16px;
+    border: none;
+    overflow: hidden;
+}
+
+.filter-modal .modal-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.filter-modal .modal-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filter-modal .btn-close {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    opacity: 1;
+    background-size: 10px;
+    transition: background-color 0.18s;
+}
+
+.filter-modal .btn-close:hover {
+    background-color: #ebebeb;
+}
+
+.filter-modal .modal-body {
+    padding: 0;
+    overflow-y: auto;
+}
+
+.filter-modal .modal-footer {
+    padding: 14px 24px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ── Filter blocks ────────────────────────────────────── */
+.filter-block {
+    padding: 24px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-block:last-child {
+    border-bottom: none;
+}
+
+.filter-block-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.filter-block-subtitle {
+    font-size: 12px;
+    color: #717171;
+    margin-bottom: 16px;
+}
+
+/* ── Price range ──────────────────────────────────────── */
+.price-inputs-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.price-box {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: border-color 0.2s;
+    cursor: text;
+}
+
+.price-box:focus-within {
+    border-color: #222;
+}
+
+.price-box-label {
+    font-size: 11px;
+    color: #717171;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.price-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    width: 100%;
+    background: transparent;
+    font-family: inherit;
+}
+
+/* ── Dual range slider ────────────────────────────────── */
+.dual-range-wrap {
+    position: relative;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.dual-range-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #ddd;
+    border-radius: 99px;
+}
+
+.dual-range-fill {
+    position: absolute;
+    height: 3px;
+    background: #222;
+    border-radius: 99px;
+    pointer-events: none;
+}
+
+.dual-range-wrap input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: none;
+    outline: none;
+}
+
+.dual-range-wrap input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #222;
+    cursor: pointer;
+    pointer-events: all;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s;
+}
+
+.dual-range-wrap input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* ── Room counters ────────────────────────────────────── */
+.counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.counter-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.counter-row:first-child {
+    padding-top: 0;
+}
+
+.counter-label {
+    font-size: 14px;
+    color: #222;
+}
+
+.counter-label small {
+    display: block;
+    font-size: 12px;
+    color: #717171;
+    margin-top: 2px;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.counter-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid #ccc;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    color: #444;
+    transition: border-color 0.18s, color 0.18s;
+    user-select: none;
+    padding: 0 0 2px 0;
+}
+
+.counter-btn:hover:not(:disabled) {
+    border-color: #222;
+    color: #222;
+}
+
+.counter-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.counter-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ── Property type chips ──────────────────────────────── */
+.type-chip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.type-chip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.18s, background 0.18s;
+    user-select: none;
+}
+
+.type-chip i {
+    font-size: 20px;
+    color: #444;
+    width: 22px;
+    text-align: center;
+    transition: color 0.18s;
+}
+
+.type-chip span {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    transition: color 0.18s;
+}
+
+.type-chip:hover {
+    border-color: #888;
+}
+
+.type-chip.selected {
+    border-color: #222;
+    background: #f7f7f7;
+}
+
+.type-chip.selected i,
+.type-chip.selected span {
+    color: #222;
+}
+
+/* ── Amenities ────────────────────────────────────────── */
+.amenity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 32px;
+}
+
+.amenity-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+.amenity-label input[type="checkbox"] {
+    display: none;
+}
+
+.amenity-check-box {
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.18s, background 0.18s;
+}
+
+.amenity-check-box i {
+    font-size: 11px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.amenity-label input:checked+.amenity-check-box {
+    background: #222;
+    border-color: #222;
+}
+
+.amenity-label input:checked+.amenity-check-box i {
+    opacity: 1;
+}
+
+.amenity-label:hover .amenity-check-box {
+    border-color: #888;
+}
+
+.amenity-text {
+    font-size: 13px;
+    color: #444;
+}
+
+/* ── Rating pills ─────────────────────────────────────── */
+.rating-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.rating-pill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 18px;
+    border: 1.5px solid #ddd;
+    border-radius: 99px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    transition: border-color 0.18s, background 0.18s, color 0.18s;
+    user-select: none;
+    background: white;
+}
+
+.rating-pill i {
+    color: #f59e0b;
+    font-size: 12px;
+}
+
+.rating-pill:hover {
+    border-color: #888;
+}
+
+.rating-pill.selected {
+    border-color: #222;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* ── Booking pills ────────────────────────────────────── */
+.booking-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.booking-pill {
+    padding: 9px 18px;
+    border: 1.5px solid #ddd;
+    border-radius: 99px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    transition: border-color 0.18s, background 0.18s, color 0.18s;
+    user-select: none;
+    background: white;
+}
+
+.booking-pill:hover {
+    border-color: #888;
+}
+
+.booking-pill.selected {
+    border-color: #222;
+    background: #222;
+    color: white;
+}
+
+/* ── Language pills ───────────────────────────────────── */
+.lang-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.lang-pill {
+    padding: 8px 16px;
+    border: 1.5px solid #ddd;
+    border-radius: 99px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    transition: border-color 0.18s, background 0.18s, color 0.18s;
+    user-select: none;
+    background: white;
+}
+
+.lang-pill:hover {
+    border-color: #888;
+}
+
+.lang-pill.selected {
+    border-color: #222;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* ── Footer buttons ───────────────────────────────────── */
+.filter-clear-btn {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    transition: color 0.18s;
+}
+
+.filter-clear-btn:hover {
+    color: #e11d48;
+}
+
+.filter-apply-btn {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.filter-apply-btn:hover {
+    background: #111;
+}
+
+.filter-apply-btn:active {
+    transform: scale(0.97);
+}
+
+/* ── Filter button header ─────────────────────────────── */
+.filter-btn-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: inherit;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.filter-btn-header:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border-color: #bbb;
+}
+
+.filter-btn-header i {
+    font-size: 14px;
+    color: #444;
+}
+
+.filter-btn-header.active {
+    background: #222;
+    color: white;
+    border-color: #222;
+}
+
+.filter-btn-header.active i {
+    color: white;
+}
+
+/* ── Filter count badge ───────────────────────────────── */
+.filter-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #222;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+.filter-btn-header.active .filter-count-badge {
+    background: white;
+    color: #222;
+}
