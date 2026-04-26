@@ -1,0 +1,7 @@
+.comment {
+    border: 1px solid salmon;
+    border-radius: 1rem;
+    width: 300px;
+    margin: 0 auto 0.5rem auto;
+    padding: 0.7rem;
+}
